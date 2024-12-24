@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In</title>
+    <style>
+      body {
+        background-image: url('sign_in_bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+      }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 200px;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .social-buttons {
+            margin-top: 20px;
+        }
+
+        .social-buttons button {
+            background-color: transparent;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .social-buttons button:hover {
+	background-color: #000000;
+        }
+    </style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body>
+    <header><a href="master.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('home','','home button.png',0)"><img src="home off.png" alt="" width="50" height="50" id="home"></a>&nbsp;</header>
+    <h1 style="color: white;">&nbsp; Sign in</h1>
+    <form>
+        <input type="text" placeholder="Email">
+        <br>
+        <input type="password" placeholder="Password">
+        <br>
+</form>
+
+    <button type="submit">Sign In</button>
+    <p style="color: white;">Or sign in with:</p>
+<div class="social-buttons">
+  <button><img src="google_logo.png" alt="Sign in with Google" width="20" height="20" class="google">Sign in with Google</button>
+        <button><img src="facebook_logo.png" alt="Sign in with Github" width="20" height="20">Sign in with Facebook</button>
+        <button><img src="linkedin_logo.png" alt="Sign in with LinkedIn" width="20" height="20">Sign in with LinkedIn</button>
+    </div>
+</body>
+</html>
